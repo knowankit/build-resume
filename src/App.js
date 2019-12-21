@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react'
+import './App.scss'
+import 'antd/dist/antd.css'
+// import Login from './components/login'
+import Stepper from './components/stepper/stepper'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container-fluid'>
+      <div className='row mx-auto d-flex justify-content-center align-items-center'>
+        {/* <div className='col-md-2 login d-flex justify-content-center'>
+          <Login />
+          <div>
+            <div>
+              <p>BUILD Resume</p>
+            </div>
+          </div>
+        </div> */}
+        <div className='col-md-6 login'>
+          <Stepper />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
