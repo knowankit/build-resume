@@ -1,9 +1,15 @@
-body {
-    background: url("/static/images/resume-image.jpg") no-repeat center center fixed;
-      background-size: cover;
-      height: 100vh;
-}
+// body {
+//     background: url("/static/images/resume-image.jpg") no-repeat center center fixed;
+//       background-size: cover;
+//       height: 100vh;
+// }
 
+body{
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 .login{
     background-color: white;
     height: 800px;
@@ -11,4 +17,47 @@ body {
     border-radius: 20px;
     margin-top: 250px;
     margin-bottom: 250px;
+}
+
+.content {
+    background-color: white;
+    margin-top: 150px;
+    width: 60rem;;
+    min-height: 20rem;
+    border-radius: 5px;
+  
+}
+
+.menubar{
+    background-color: white;
+    height: 80px;
+    span{
+        font-size: 30px;
+        margin-left: 20px;
+        color: #1E1E24;
+    }
+    display: flex;
+    align-content: center;
+
+}
+
+.heading{
+    margin-top: 100px;
+    
+    color: white;
+    text-align: center;
+    p:first-child{
+        margin: 0px;
+        font-size: 40px;
+        color: white;
+    }
+
+    p {
+        font-size: 20px;
+        color: #1E1E24;
+    }
+      .build-now {
+        background-color: #7AE7C7;
+        padding: 10px;
+    }
 }
