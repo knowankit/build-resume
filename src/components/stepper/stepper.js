@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import { Steps, Icon } from 'antd'
 import { Steps, Button, message } from 'antd'
-import Personal from './stepper-components/personal'
+import Personal from '../../containers/personal'
 import Education from './stepper-components/education'
 import Professional from './stepper-components/professional'
 import Projects from './stepper-components/projects'
@@ -63,7 +63,7 @@ class Stepper extends Component {
   render () {
     const { current } = this.state
     return (
-      <div className='mx-auto'>
+      <div className='mx-auto container stepper mt-4'>
         <Steps current={current}>
           {steps.map(item => (
             <Step key={item.title} title={item.title} />
