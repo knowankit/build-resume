@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Divider, RangePicker } from 'antd'
+import { Form, Input, Button, Divider } from 'antd'
 class Education extends Component {
   componentDidMount () {
     console.log('edu', this.props.education)
