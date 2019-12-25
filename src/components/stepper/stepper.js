@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Steps, Icon } from 'antd'
-import { Steps, Button, message } from 'antd'
+import { Steps, Button, message, Icon } from 'antd'
 import Personal from '../../containers/personal'
 import Education from '../../containers/education'
 import Professional from '../../containers/profession'
@@ -63,6 +63,7 @@ class Stepper extends Component {
   render () {
     const { current } = this.state
     return (
+    <>
       <div className='mx-auto container stepper mt-4'>
         <Steps current={current}>
           {steps.map(item => (
@@ -75,7 +76,7 @@ class Stepper extends Component {
         <div className='steps-action mb-4 text-center'>
           {current < steps.length - 1 && (
             <Button type='primary' onClick={() => this.next()}>
-              Next
+              Next <Icon type='arrow-right' />
             </Button>
           )}
           {current === steps.length - 1 && (
@@ -93,6 +94,14 @@ class Stepper extends Component {
           )}
         </div>
       </div>
+      <style>
+        {`
+          .anticon {
+            vertical-align: baseline !important;
+          }
+        `}
+      </style>
+    </>
     )
   }
 }
