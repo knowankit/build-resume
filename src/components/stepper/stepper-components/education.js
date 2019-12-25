@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Divider } from 'antd'
+import { Form, Input, Button, Divider, RangePicker } from 'antd'
 class Education extends Component {
   componentDidMount () {
     console.log('edu', this.props.education)
@@ -9,10 +9,9 @@ class Education extends Component {
   }
 
   renderEducation = () => {
-    const educationCount = this.props.educationFieldCount
-    const { education } = this.props
+    const { education, educationFieldCount } = this.props
     let fields = []
-    for (let index = 0; index < educationCount; index++) {
+    for (let index = 0; index < educationFieldCount; index++) {
       fields.push(
       <>
         <Form.Item label='Degree Name' validateStatus='' required>
@@ -21,7 +20,7 @@ class Education extends Component {
           <Form.Item label='Year of passing' validateStatus='' required>
             <Input placeholder='year of passing' name='yop' value={education[index].yop} onChange={(e) => this.handleChange(e, index)} />
           </Form.Item>
-          <Button type='danger' className='float-right' onClick={() => this.deleteField(index)} disabled={this.props.educationFieldCount <= 1}>
+          <Button type='danger' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.educationFieldCount <= 1}>
         Delete
         </Button>
       </>
@@ -35,7 +34,7 @@ class Education extends Component {
     this.props.updateEducationCount(this.props.educationFieldCount + 1)
   }
 
-  deleteField = (index) => {
+  deleteField = () => {
     this.props.deleteEducationCount(this.props.educationFieldCount - 1)
   }
 
