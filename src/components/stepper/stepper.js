@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import { Steps, Icon } from 'antd'
 import { Steps, Button, message } from 'antd'
 import Personal from '../../containers/personal'
-import Education from './stepper-components/education'
+import Education from '../../containers/education'
 import Professional from './stepper-components/professional'
 import Projects from './stepper-components/projects'
 
@@ -31,7 +31,7 @@ class Stepper extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      current: 0
+      current: 2
     }
   }
 

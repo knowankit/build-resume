@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input } from 'antd'
 
+const { TextArea } = Input;
 class Personal extends Component {
   handleChange = (e) => {
     this.props.updatePersonal(e.target.name, e.target.value)
@@ -19,17 +20,20 @@ class Personal extends Component {
           <Form.Item label='Phone' validateStatus='' required>
             <Input placeholder='phone number' name='phone' value={this.props.personal.phone} onChange={this.handleChange} />
           </Form.Item>
+           <Form.Item label='About Me' validateStatus='' required>
+            <TextArea rows={3} placeholder='about me' name='aboutMe' value={this.props.personal.aboutMe} onChange={this.handleChange} />
+          </Form.Item>
           <Form.Item label='Address Line 1' validateStatus=''>
-            <Input placeholder='address line 1' name='address-line-first' maxLength='30' defaultValue='' onChange={this.handleChange} />
+            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value='' onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 2' validateStatus=''>
-            <Input placeholder='address line 2' name='address-line-second' maxLength='30' defaultValue='' onChange={this.handleChange} />
+            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value='' onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 3' validateStatus=''>
-            <Input placeholder='address line 3' name='address-line-third' maxLength='30' defaultValue='' onChange={this.handleChange}/>
+            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value='' onChange={this.handleChange}/>
           </Form.Item>
         </Form>
-        <style jsx>
+        <style global jsx>
           {`
             .steps-content {
               margin-top: 40px;
@@ -57,5 +61,7 @@ class Personal extends Component {
     )
   }
 }
+
+
 
 export default Personal

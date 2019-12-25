@@ -3,7 +3,6 @@ import constants from '../constants/personal'
 
 const initialState = {
   personal: {
-    1: 'hello'
   }
 }
 
