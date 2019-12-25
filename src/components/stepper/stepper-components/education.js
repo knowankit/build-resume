@@ -20,7 +20,7 @@ class Education extends Component {
           <Form.Item label='Year of passing' validateStatus='' required>
             <Input placeholder='year of passing' name='yop' value={education[index].yop} onChange={(e) => this.handleChange(e, index)} />
           </Form.Item>
-          <Button type='danger' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.educationFieldCount <= 1}>
+          <Button type='danger' icon='delete' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.educationFieldCount <= 1}>
         Delete
         </Button>
       </>
@@ -46,7 +46,7 @@ class Education extends Component {
            {this.renderEducation()}
           <Divider />
         </Form>
-        <Button type='secondary' onClick={this.addField}>
+        <Button type='secondary' icon='plus-circle' onClick={this.addField}>
           Add More
         </Button>
         <style jsx>

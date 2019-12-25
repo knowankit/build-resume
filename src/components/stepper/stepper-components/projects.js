@@ -19,7 +19,7 @@ class Projects extends Component {
           <Form.Item label='Description' validateStatus='' required>
             <TextArea rows={2} placeholder='description' name='description' value={projects[index].description} onChange={(e) => this.handleChange(e, index)} />
           </Form.Item>
-          <Button type='danger' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.projectFieldCount <= 1}>
+          <Button type='danger' icon='delete' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.projectFieldCount <= 1}>
         Delete
         </Button>
       </>
@@ -45,7 +45,7 @@ class Projects extends Component {
            {this.renderProjects()}
           <Divider />
         </Form>
-        <Button type='secondary' onClick={this.addField}>
+        <Button type='secondary' icon='plus-circle' onClick={this.addField}>
           Add More
         </Button>
         <style jsx>

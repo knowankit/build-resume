@@ -20,7 +20,7 @@ class Profession extends Component {
         <Form.Item label='Role' validateStatus='' required>
           <TextArea rows={2} placeholder='role' name='role' value={profession[index].role} onChange={(e) => this.handleChange(e, index)} />
         </Form.Item>
-        <Button type='danger' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.professionFieldCount <= 1}>
+        <Button type='danger' icon='delete' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.professionFieldCount <= 1}>
           Delete
         </Button>
       </>
@@ -46,7 +46,7 @@ class Profession extends Component {
            {this.renderProjects()}
           <Divider />
         </Form>
-        <Button type='secondary' onClick={this.addField}>
+        <Button type='secondary' icon='plus-circle' onClick={this.addField}>
           Add More
         </Button>
         <style jsx>
