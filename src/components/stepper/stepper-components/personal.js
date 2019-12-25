@@ -53,7 +53,9 @@ class Personal extends Component {
             }
 
             form {
-              
+              height: 450px;
+              overflow-x: hidden;
+              overflow-y: scroll;
             }
           `}
         </style>
