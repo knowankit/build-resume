@@ -4,7 +4,7 @@ import { Steps, Button, message } from 'antd'
 import Personal from '../../containers/personal'
 import Education from '../../containers/education'
 import Professional from './stepper-components/professional'
-import Projects from './stepper-components/projects'
+import Projects from '../../containers/projects'
 
 const { Step } = Steps
 
@@ -31,7 +31,7 @@ class Stepper extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      current: 2
+      current: 3
     }
   }
 
