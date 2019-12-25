@@ -66,10 +66,6 @@ class Projects extends Component {
             .ant-form-item {
               margin-bottom: 10px;
             }
-
-            form {
-
-            }
           `}
         </style>
       </>
