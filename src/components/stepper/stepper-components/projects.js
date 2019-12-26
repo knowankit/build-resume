@@ -13,7 +13,7 @@ class Projects extends Component {
     for (let index = 0; index < projectFieldCount; index++) {
       fields.push(
       <>
-        <Form.Item label='Project Name' validateStatus='' required>
+        <Form.Item label={`Project Name ${index + 1}`} validateStatus='' required>
             <Input placeholder='project name' name='projectName' value={projects[index].projectName} onChange={(e) => this.handleChange(e, index)} />
           </Form.Item>
           <Form.Item label='Description' validateStatus='' required>
