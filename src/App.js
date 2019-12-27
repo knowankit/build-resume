@@ -7,6 +7,8 @@ import {
 import Stepper from './components/stepper/stepper'
 import Home from './components/home'
 import Navbar from './components/navbar'
+import ThemeSelection from './components/theme-selection'
+import { BrightAndLight } from './components/resume-themes'
 
 function App () {
   return (
@@ -18,8 +20,14 @@ function App () {
             <Route exact path='/'>
               <Home />
             </Route>
+            <Route path='/theme-selection'>
+              <ThemeSelection />
+            </Route>
             <Route path='/build'>
               <Stepper />
+            </Route>
+            <Route path='/theme'>
+              <BrightAndLight />
             </Route>
           </Switch>
         </div>
