@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
-
+import jsPDF from 'jspdf'
+import html2canvas from 'html2canvas'
 export class BrightAndLight extends Component {
+  download = () => {
+    html2canvas(document.querySelector('.bright-and-light')).then(canvas => {
+			let pdf = new jsPDF('p', 'mm', 'a4');
+			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 0, 0);
+			pdf.save('sample.pdf');
+		});
+  }
   render () {
     return (
       <div className='container bright-and-light'>
@@ -64,7 +72,7 @@ export class BrightAndLight extends Component {
           </table>
         </div>
         <div className='row footer'>
-            
+              <button onClick={this.download}>Download</button>
         </div>
       </div>
     )
