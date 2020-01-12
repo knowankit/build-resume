@@ -3,9 +3,10 @@ import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 export class BrightAndLight extends Component {
   download = () => {
-    html2canvas(document.querySelector('.bright-and-light')).then(canvas => {
-			let pdf = new jsPDF('p', 'mm', 'a4');
-			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 0, 0);
+    html2canvas(document.querySelector('.bright-and-light'), { scrollX: 0,  scrollY: 0 }).then(canvas => {
+      let pdf = new jsPDF('p', 'mm', 'a4');
+      let imageHeight = 211/canvas.width * canvas.height
+			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, -100, 211, imageHeight);
 			pdf.save('sample.pdf');
 		});
   }
