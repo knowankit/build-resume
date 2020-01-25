@@ -10,10 +10,16 @@ class Personal extends Component {
     return (
       <div style={{ width: '600px' }} className='mx-auto'>
         <Form>
-          <Form.Item label='Name' validateStatus='' required>
-            <Input placeholder='name' name='name' value={this.props.personal.name} onChange={this.handleChange} />
+          <Form.Item label='First Name' validateStatus='' required>
+            <Input placeholder='First Name' name='firstName' value={this.props.personal.firstName} onChange={this.handleChange} />
+          </Form.Item>
+          <Form.Item label='Last Name' validateStatus='' required>
+            <Input placeholder='Last Name' name='lastName' value={this.props.personal.lastName} onChange={this.handleChange} />
           </Form.Item>
 
+          <Form.Item label='Designation' validateStatus='' required>
+            <Input placeholder='Designation' name='designation' value={this.props.personal.designation} onChange={this.handleChange} />
+          </Form.Item>
           <Form.Item label='Email' validateStatus='' required>
             <Input placeholder='email' name='email' value={this.props.personal.email} onChange={this.handleChange} />
           </Form.Item>
@@ -24,13 +30,13 @@ class Personal extends Component {
             <TextArea rows={3} placeholder='about me' name='aboutMe' value={this.props.personal.aboutMe} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 1' validateStatus=''>
-            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value='' onChange={this.handleChange} />
+            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value={this.props.personal.addressLineFirst} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 2' validateStatus=''>
-            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value='' onChange={this.handleChange} />
+            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value={this.props.personal.addressLineSecond} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 3' validateStatus=''>
-            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value='' onChange={this.handleChange}/>
+            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value={this.props.personal.addressLineThird} onChange={this.handleChange}/>
           </Form.Item>
         </Form>
         <style global jsx>

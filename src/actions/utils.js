@@ -7,3 +7,10 @@ export const updateUtil = (key, value) => {
     value
   }
 }
+
+export const updateTheme = (value) => {
+  return {
+    type: constants.UPDATE_THEME_NAME,
+    value
+  }
+}

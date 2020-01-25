@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-// import { Steps, Icon } from 'antd'
-import { Steps, Button, message, Icon } from 'antd'
+import { Steps, Button, Icon } from 'antd'
 import Personal from '../../containers/personal'
 import Education from '../../containers/education'
 import Professional from '../../containers/profession'
 import Projects from '../../containers/projects'
+import { Redirect } from 'react-router'
 
 const { Step } = Steps
 
@@ -31,8 +31,17 @@ class Stepper extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      current: 0
+      current: 0,
+      redirect: false
     }
+  }
+
+  generatePdf = () => {
+    this.setState({
+      redirect: true
+    })
+  
+    console.log(this.props.theme)
   }
 
   projectStepper (name) {
@@ -62,6 +71,11 @@ class Stepper extends Component {
 
   render () {
     const { current } = this.state
+
+    if (this.state.redirect) {
+      return <Redirect push to="/garden" />;
+    }
+
     return (
     <>
       <div className='mx-auto container stepper mt-4'>
@@ -82,7 +96,7 @@ class Stepper extends Component {
           {current === steps.length - 1 && (
             <Button
               type='primary'
-              onClick={() => message.success('Processing complete!')}
+              onClick={this.generatePdf}
             >
               Done
             </Button>

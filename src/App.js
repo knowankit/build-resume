@@ -4,11 +4,11 @@ import 'antd/dist/antd.css'
 import {
   BrowserRouter as Router, Switch, Route
 } from 'react-router-dom'
-import Stepper from './components/stepper/stepper'
+import Stepper from './containers/stepper'
 import Home from './components/home'
 import Navbar from './components/navbar'
-import ThemeSelection from './components/theme-selection'
-import { BrightAndLight } from './components/resume-themes'
+import ThemeSelection from './containers/theme-selection'
+import Garden from './containers/garden'
 
 function App () {
   return (
@@ -26,8 +26,8 @@ function App () {
             <Route path='/build'>
               <Stepper />
             </Route>
-            <Route path='/theme'>
-              <BrightAndLight />
+            <Route path='/garden'>
+              <Garden />
             </Route>
           </Switch>
         </div>
