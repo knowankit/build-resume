@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import jsPDF from 'jspdf'
-import html2canvas from 'html2canvas'
 export class BrightAndLight extends Component {
   download = () => {
 
@@ -11,8 +9,6 @@ export class BrightAndLight extends Component {
     return (
       <>
       <div className='container bright-and-light'>
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
         <div className='row'>
           <div className='job-title'>
             <p className='float-right mr-4'>A SALESMAN</p>
