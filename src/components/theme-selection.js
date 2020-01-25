@@ -9,7 +9,7 @@ class ThemeSelection extends Component {
     }
   }
   selectTheme = (type) => {
-    
+    this.props.updateTheme(type)
     this.setState({
       redirect: true
     })

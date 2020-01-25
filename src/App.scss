@@ -2,7 +2,7 @@
 
 body {
     background:  linear-gradient(
-        #f80759e6,
+    #f80759e6,
         rgba(188, 78, 156, 0.9)
       ),
       url("/static/images/resume-image.jpg") no-repeat center center fixed;
@@ -78,7 +78,18 @@ body {
         background:  url("/themes/resume1.png");
         background-position: -40px;
         background-size: cover;
-        border: 2px solid #f80759e6;
         border-radius: 2px;
     }
+}
+
+.home-button {
+    margin-left: 1500px;
+    font-size: 20px;
+    background-color: white;
+    border: unset;
+    font-weight: bold;
+}
+
+.home-button:hover {
+    color: #f80759e6 !important;
 }

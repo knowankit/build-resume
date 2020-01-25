@@ -1,1 +1,1 @@
-export * from './bright-and-light'
+export * from './garden'

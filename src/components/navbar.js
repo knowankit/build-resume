@@ -10,6 +10,7 @@ class Navbar extends Component {
           </div>
           <div className='d-flex align-items-center'>
             <span>Build <b>Resume</b></span>
+            {/* <button className=' float-right home-button'>HOME</button> */}
           </div>
         </div>
       </div>
