@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-
+import 'bootstrap/dist/css/bootstrap.css'
 export class BrightAndLight extends Component {
+  download = () => {
+
+  }
+
   render () {
     return (
+      <>
       <div className='container bright-and-light'>
         <div className='row'>
           <div className='job-title'>
@@ -64,9 +69,11 @@ export class BrightAndLight extends Component {
           </table>
         </div>
         <div className='row footer'>
-            
+            HELLO
         </div>
       </div>
+      <button onClick={this.download}>Download</button>
+    </>
     )
   }
 }

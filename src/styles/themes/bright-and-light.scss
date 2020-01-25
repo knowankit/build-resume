@@ -4,7 +4,8 @@ $balfont: #DAAF40;
 .bright-and-light {
     background-color: white;
     margin-top: 80px !important;
-    height: 1200px;
+    // height: 1200px;
+    // height: 1500px !important;
     margin: 0px auto;
     color: $balfont;
     .row {
@@ -125,3 +126,25 @@ $balfont: #DAAF40;
         margin-top: 251px;
     }
 }
+
+    @media print {
+              .bright-and-light{
+                width: 100% !important;
+        
+                position: relative;;
+         height:100vh;
+         z-index:15;
+         margin: 0px auto;
+         
+              }
+              .navbarcustom {
+                display: none;
+              }
+
+              *, body {
+                background-color: #fff;
+                background-image: unset;
+              }
+
+              
+            }
