@@ -24,13 +24,13 @@ class Personal extends Component {
             <TextArea rows={3} placeholder='about me' name='aboutMe' value={this.props.personal.aboutMe} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 1' validateStatus=''>
-            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value='' onChange={this.handleChange} />
+            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value={this.props.personal.addressLineFirst} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 2' validateStatus=''>
-            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value='' onChange={this.handleChange} />
+            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value={this.props.personal.addressLineSecond} onChange={this.handleChange} />
           </Form.Item>
           <Form.Item label='Address Line 3' validateStatus=''>
-            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value='' onChange={this.handleChange}/>
+            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value={this.props.personal.addressLineThird} onChange={this.handleChange}/>
           </Form.Item>
         </Form>
         <style global jsx>

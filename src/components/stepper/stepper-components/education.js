@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import { Form, Input, Button, Divider } from 'antd'
 class Education extends Component {
-  componentDidMount () {
-    console.log('edu', this.props.education)
-  }
   handleChange = (e, index) => {
     this.props.updateEducation(index, e.target.name, e.target.value)
   }
 
   renderEducation = () => {
     const { education, educationFieldCount } = this.props
+    console.log(this.props)
     let fields = []
     for (let index = 0; index < educationFieldCount; index++) {
       fields.push(

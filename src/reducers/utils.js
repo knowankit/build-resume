@@ -7,8 +7,8 @@ const initialState = {
 
 export default produce((draft, action) => {
   switch (action.type) {
-    case constants.UPDATE_EDUCATION_DETAIL:
-      draft.util[action.key] = action.value
+    case constants.UPDATE_THEME_NAME:
+      draft.util = action.value
       break
   }
 }, initialState)
