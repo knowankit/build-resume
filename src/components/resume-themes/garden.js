@@ -35,8 +35,8 @@ export class Garden extends Component {
 
           <div className='row education justify-content-center'>
             {
-              education.map(edu =>
-                <div className='col-md-4 text-center'>
+              education.map((edu, index) =>
+                <div key={index} className='col-md-4 text-center'>
                   <p>{edu[1].yop}</p>
                   <p>{edu[1].degree}</p>
                 </div>
@@ -48,8 +48,8 @@ export class Garden extends Component {
             <table className='table experience-table'>
               <tbody className='text-center'>
                 {
-                  profession.map(pro =>
-                    <tr>
+                  profession.map((pro, index) =>
+                    <tr key={index}>
                       <th>{pro[1].company}</th>
                       <td>{pro[1].role}</td>
                     </tr>
