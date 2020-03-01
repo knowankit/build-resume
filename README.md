@@ -1,2 +1,3 @@
 # build-resume
-A react-redux app to generate themed resume
+A web app to create your resume and cover letter.
+
