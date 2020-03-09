@@ -1,75 +1,106 @@
-import React, { Component } from 'react'
-import { Form, Input } from 'antd'
-
-const { TextArea } = Input;
+import React, { Component } from 'react';
 class Personal extends Component {
-  handleChange = (e) => {
-    this.props.updatePersonal(e.target.name, e.target.value)
-  }
-  render () {
+  handleChange = e => {
+    this.props.updatePersonal(e.target.name, e.target.value);
+  };
+  render() {
     return (
-      <div style={{ width: '600px' }} className='mx-auto'>
-        <Form>
-          <Form.Item label='First Name' validateStatus='' required>
-            <Input placeholder='First Name' name='firstName' value={this.props.personal.firstName} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Last Name' validateStatus='' required>
-            <Input placeholder='Last Name' name='lastName' value={this.props.personal.lastName} onChange={this.handleChange} />
-          </Form.Item>
+      <div className="container mx-auto">
+        <div className="row">
+          <div className="col-md-10 mx-auto custom-column">
+            <div className="form-block">
+              <div className="form-title">
+                <span>Personal Details</span>
+              </div>
+              <form className="mx-auto">
+                <div>
+                  <label for="first name">First Name</label>
+                  <input
+                    placeholder="First Name"
+                    name="firstName"
+                    value={this.props.personal.firstName}
+                    onChange={this.handleChange}
+                  />
 
-          <Form.Item label='Designation' validateStatus='' required>
-            <Input placeholder='Designation' name='designation' value={this.props.personal.designation} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Email' validateStatus='' required>
-            <Input placeholder='email' name='email' value={this.props.personal.email} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Phone' validateStatus='' required>
-            <Input placeholder='phone number' name='phone' value={this.props.personal.phone} onChange={this.handleChange} />
-          </Form.Item>
-           <Form.Item label='About Me' validateStatus='' required>
-            <TextArea rows={3} placeholder='about me' name='aboutMe' value={this.props.personal.aboutMe} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Address Line 1' validateStatus=''>
-            <Input placeholder='address line 1' name='addressLineFirst' maxLength='30' value={this.props.personal.addressLineFirst} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Address Line 2' validateStatus=''>
-            <Input placeholder='address line 2' name='addressLineSecond' maxLength='30' value={this.props.personal.addressLineSecond} onChange={this.handleChange} />
-          </Form.Item>
-          <Form.Item label='Address Line 3' validateStatus=''>
-            <Input placeholder='address line 3' name='addressLineThird' maxLength='30' value={this.props.personal.addressLineThird} onChange={this.handleChange}/>
-          </Form.Item>
-        </Form>
-        <style global jsx>
-          {`
-            .steps-content {
-              margin-top: 40px;
-              min-height: 350px;
-            }
+                  <label for="last name">Last Name</label>
+                  <input
+                    placeholder="Last Name"
+                    name="lastName"
+                    value={this.props.personal.lastName}
+                    onChange={this.handleChange}
+                  />
+                </div>
 
-            label {
-              margin: 0px;
-            }
+                <label for="Designation">Designation</label>
+                <input
+                  placeholder="Designation"
+                  name="designation"
+                  value={this.props.personal.designation}
+                  onChange={this.handleChange}
+                />
 
-            .ant-form-item-label {
-              line-height: 25px;
-            }
+                <label for="Email">Email</label>
+                <input
+                  placeholder="email"
+                  name="email"
+                  value={this.props.personal.email}
+                  onChange={this.handleChange}
+                />
 
-            .ant-form-item {
-              margin-bottom: 10px;
-            }
+                <label for="Phone">Phone</label>
+                <input
+                  placeholder="phone number"
+                  name="phone"
+                  value={this.props.personal.phone}
+                  onChange={this.handleChange}
+                />
 
-            form {
-              height: 450px;
-              overflow-x: hidden;
-              overflow-y: scroll;
-            }
-          `}
-        </style>
+                <label for="About Me">About Me</label>
+                <textArea
+                  rows={2}
+                  placeholder="about me"
+                  name="aboutMe"
+                  value={this.props.personal.aboutMe}
+                  onChange={this.handleChange}
+                />
+
+                <label for="Address Line 1">Address Line 1</label>
+                <input
+                  placeholder="address line 1"
+                  name="addressLineFirst"
+                  maxLength="30"
+                  value={this.props.personal.addressLineFirst}
+                  onChange={this.handleChange}
+                />
+
+                <label for="Address Line 2">Address Line 2</label>
+                <input
+                  placeholder="address line 2"
+                  name="addressLineSecond"
+                  maxLength="30"
+                  value={this.props.personal.addressLineSecond}
+                  onChange={this.handleChange}
+                />
+
+                <label for="Address Line 3">Address Line 3</label>
+                <input
+                  placeholder="address line 3"
+                  name="addressLineThird"
+                  maxLength="30"
+                  value={this.props.personal.addressLineThird}
+                  onChange={this.handleChange}
+                />
+              </form>
+            </div>
+            <div className="button-group">
+              <button className="btn btn-light">Previous</button>
+              <button className="btn btn-success">Next</button>
+            </div>
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
 
-
-
-export default Personal
+export default Personal;

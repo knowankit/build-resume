@@ -1,0 +1,75 @@
+.custom-column {
+  background-color: white;
+  margin-top: 40px;
+  padding: 40px;
+  -webkit-box-shadow: 3px 3px 16px 0px grey;
+  -moz-box-shadow: 3px 3px 16px 0px grey;
+  box-shadow: 3px 3px 16px 0px grey;
+}
+
+// Form css
+
+.form-block {
+  border: 1px solid #45adff;
+}
+
+form {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.form-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: #45adff;
+  color: white;
+  span {
+    margin-left: 10px;
+  }
+}
+
+input {
+  width: 90%;
+  height: 40px;
+}
+
+label {
+  width: 90%;
+  display: block;
+}
+
+textarea {
+  display: block;
+
+  width: 90%;
+}
+
+textarea,
+input,
+label {
+  margin-left: 5% !important;
+  margin-bottom: 15px !important;
+}
+
+label {
+  margin-bottom: 5px !important;
+}
+
+// button group
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+
+  button {
+    width: 40%;
+    height: 60px;
+    text-transform: uppercase;
+    border-radius: 0px;
+  }
+}

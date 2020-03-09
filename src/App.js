@@ -7,7 +7,7 @@ import {
 import Stepper from './containers/stepper'
 import Home from './components/home'
 import Navbar from './components/navbar'
-import ThemeSelection from './containers/theme-selection'
+import Personal from './containers/personal'
 import Garden from './containers/garden'
 
 function App () {
@@ -20,8 +20,8 @@ function App () {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route path='/theme-selection'>
-              <ThemeSelection />
+            <Route path='/personal'>
+              <Personal />
             </Route>
             <Route path='/build'>
               <Stepper />
