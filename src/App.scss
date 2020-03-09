@@ -69,16 +69,27 @@ body {
 }
 
 .theme-selection {
+    -webkit-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px -6px rgba(0,0,0,0.75);
+
     .theme-button {
-        margin-top: 50px;
-        height: 200px !important;
-        width: 150px;
-        background-color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
         color: white !important;
         background:  url("/themes/resume1.png");
-        background-position: -40px;
+        background-position: -20px;
         background-size: cover;
         border-radius: 2px;
+        border: 1px solid black;
+        -webkit-box-shadow: 4px 6px 20px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 20px -8px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 20px -8px rgba(0,0,0,0.75);
+        transition: all 0.4s;
+    }
+
+    .theme-button:hover {
+        box-shadow: none;
     }
 }
 
