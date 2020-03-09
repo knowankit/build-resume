@@ -5,7 +5,7 @@ import { Icon } from 'antd'
 class Home extends Component {
   render () {
     return (
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='heading'>
           <p className='mx-auto'>Build your Resume in just few Clicks.</p>
           <p className='mx-auto'>Creating a Professional Resume and Cover Letter is Easy Now.</p>
@@ -35,11 +35,6 @@ class Home extends Component {
               justify-content: center;
             }
             
-            .instruction-row {
-              margin-top: 50px;
-            }
-
-             
           `}
         </style>
       </div>

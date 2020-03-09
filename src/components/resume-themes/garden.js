@@ -28,8 +28,6 @@ export class Garden extends Component {
           <div className='about'>
             <p className='mx-auto about-me-text'>-ABOUT ME</p>
             <p className='mx-auto summary-one'>{this.props.personal.aboutMe || 'About Me'}</p>
-            {/* <p className='mx-auto summary-two'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p> */}
           </div>
           <p className='education-text'>-EDUCATION</p>
 

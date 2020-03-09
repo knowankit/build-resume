@@ -31,8 +31,6 @@ class ThemeSelection extends Component {
           .theme-selection {
             background-color: white;
             border-radius: 5px;
-            height: 300px;
-            margin-top: 150px !important;
         }
       `}
       </style>
