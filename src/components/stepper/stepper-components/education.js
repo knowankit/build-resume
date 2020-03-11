@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 class Education extends Component {
   handleChange = (e, index) => {
     this.props.updateEducation(index, e.target.name, e.target.value);
+  };
+
+  handleSubmit = type => {
+    if (type === 'prev') {
+      this.props.history.push('/profession');
+    } else {
+      this.props.history.push('/projects');
+    }
   };
 
   renderEducation = () => {
@@ -70,8 +79,16 @@ class Education extends Component {
             </div>
           </div>
           <div className="button-group">
-            <button className="btn btn-secondary">Previous</button>
-            <button className="btn btn-dark" onClick={this.handleSubmit}>
+            <button
+              className="btn btn-secondary"
+              onClick={() => this.handleSubmit('prev')}
+            >
+              Previous
+            </button>
+            <button
+              className="btn btn-dark"
+              onClick={() => this.handleSubmit('next')}
+            >
               Next
             </button>
           </div>
@@ -101,4 +118,4 @@ class Education extends Component {
   }
 }
 
-export default Education;
+export default withRouter(Education);

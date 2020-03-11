@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 class Personal extends Component {
   handleChange = e => {
     this.props.updatePersonal(e.target.name, e.target.value);
   };
 
-  handleSubmit = () => {
-    this.props.history.push('/profession');
+  handleSubmit = type => {
+    if (type === "prev") {
+      this.props.history.push("/");
+    } else {
+      this.props.history.push("/profession");
+    }
   };
 
   render() {
@@ -77,8 +81,16 @@ class Personal extends Component {
             </div>
             <hr />
             <div className="button-group">
-              <button className="btn btn-secondary">Previous</button>
-              <button className="btn btn-dark" onClick={this.handleSubmit}>
+              <button
+                className="btn btn-secondary"
+                onClick={() => this.handleSubmit("prev")}
+              >
+                Previous
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={() => this.handleSubmit("next")}
+              >
                 Next
               </button>
             </div>
