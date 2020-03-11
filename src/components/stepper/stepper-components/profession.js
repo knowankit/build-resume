@@ -1,54 +1,99 @@
-import React, { Component } from 'react'
-import { Form, Input, Button, Divider } from 'antd'
-
-const { TextArea } = Input;
-
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 class Profession extends Component {
   handleChange = (e, index) => {
-    this.props.updateProfession(index, e.target.name, e.target.value)
-  }
+    this.props.updateProfession(index, e.target.name, e.target.value);
+  };
+
+  handleSubmit = type => {
+    if (type === 'prev') {
+      this.props.history.push('/personal');
+    } else {
+      this.props.history.push('/profession');
+    }
+  };
 
   renderProjects = () => {
-    const { profession, professionFieldCount } = this.props
-    let fields = []
+    const { profession, professionFieldCount } = this.props;
+    let fields = [];
     for (let index = 0; index < professionFieldCount; index++) {
       fields.push(
-      <>
-        <Form.Item label='Company Name' validateStatus='' required>
-          <Input placeholder='company name' name='company' value={profession[index].company} onChange={(e) => this.handleChange(e, index)} />
-        </Form.Item>
-        <Form.Item label='Role' validateStatus='' required>
-          <TextArea rows={2} placeholder='role' name='role' value={profession[index].role} onChange={(e) => this.handleChange(e, index)} />
-        </Form.Item>
-        <Button type='danger' icon='delete' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.professionFieldCount <= 1}>
-          Delete
-        </Button>
-      </>
-      )
+        <>
+          <label for="Company Name">Company Name</label>
+          <input
+            placeholder="company name"
+            name="company"
+            value={profession[index].company}
+            onChange={e => this.handleChange(e, index)}
+          />
+          <label for="Role">Role</label>
+          <textArea
+            rows={2}
+            placeholder="role"
+            name="role"
+            value={profession[index].role}
+            onChange={e => this.handleChange(e, index)}
+          />
+          <button
+            className="btn btn-danger float-right  mb-2"
+            style={{ marginRight: '5%' }}
+            onClick={() => this.deleteField(index)}
+            disabled={this.props.professionFieldCount <= 1}
+          >
+            Delete
+          </button>
+        </>
+      );
     }
 
-    return fields
-  }
+    return fields;
+  };
 
   addField = () => {
-    this.props.updateProfessionCount(this.props.professionFieldCount + 1)
-  }
+    this.props.updateProfessionCount(this.props.professionFieldCount + 1);
+  };
 
   deleteField = () => {
-    this.props.deleteProfessionCount(this.props.professionFieldCount - 1)
-  }
+    this.props.deleteProfessionCount(this.props.professionFieldCount - 1);
+  };
 
-
-  render () {
+  render() {
     return (
-      <>
-        <Form>
-           {this.renderProjects()}
-          <Divider />
-        </Form>
-        <Button type='secondary' icon='plus-circle' onClick={this.addField}>
-          Add More
-        </Button>
+      <div className="container">
+        <div className="form-title">
+          <span>Professional Details</span>
+        </div>
+        <div className="row">
+          <div className="col-md-11 mx-auto custom-column">
+            <hr />
+            <div>
+              <form>{this.renderProjects()}</form>
+            </div>
+            <hr />
+            <button
+              style={{ marginRight: '5%' }}
+              className="btn btn-success float-right"
+              onClick={this.addField}
+            >
+              Add More
+            </button>
+          </div>
+        </div>
+
+        <div className="button-group">
+          <button
+            className="btn btn-secondary"
+            onClick={() => this.handleSubmit('prev')}
+          >
+            Previous
+          </button>
+          <button
+            className="btn btn-dark"
+            onClick={() => this.handleSubmit('next')}
+          >
+            Next
+          </button>
+        </div>
         <style jsx>
           {`
             .steps-content {
@@ -69,9 +114,9 @@ class Profession extends Component {
             }
           `}
         </style>
-      </>
-      )
+      </div>
+    );
   }
 }
 
-export default Profession
+export default withRouter(Profession);

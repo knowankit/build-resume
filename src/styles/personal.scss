@@ -1,6 +1,7 @@
 .custom-column {
   background-color: white;
   overflow: scroll;
+  min-height: 500px;
   //   padding: 40px;
   //   -webkit-box-shadow: 3px 3px 16px 0px grey;
   //   -moz-box-shadow: 3px 3px 16px 0px grey;
@@ -14,8 +15,8 @@
 }
 
 form {
-  height: 400px;
   overflow-x: hidden;
+  height: 400px;
   overflow-y: scroll;
 }
 
@@ -60,8 +61,10 @@ label {
 
 textarea {
   display: block;
+  border: 2px;
   border-style: solid;
   width: 90%;
+  padding-left: 10px;
 }
 
 textarea,

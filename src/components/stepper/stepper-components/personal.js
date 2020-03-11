@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 class Personal extends Component {
   handleChange = e => {
     this.props.updatePersonal(e.target.name, e.target.value);
   };
+
+  handleSubmit = () => {
+    this.props.history.push('/profession');
+  };
+
   render() {
     return (
       <div className="container mx-auto">
@@ -72,7 +78,9 @@ class Personal extends Component {
             <hr />
             <div className="button-group">
               <button className="btn btn-secondary">Previous</button>
-              <button className="btn btn-dark">Next</button>
+              <button className="btn btn-dark" onClick={this.handleSubmit}>
+                Next
+              </button>
             </div>
           </div>
         </div>
@@ -81,4 +89,4 @@ class Personal extends Component {
   }
 }
 
-export default Personal;
+export default withRouter(Personal);
