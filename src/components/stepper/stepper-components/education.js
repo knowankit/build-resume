@@ -1,52 +1,81 @@
-import React, { Component } from 'react'
-import { Form, Input, Button, Divider } from 'antd'
+import React, { Component } from 'react';
 class Education extends Component {
   handleChange = (e, index) => {
-    this.props.updateEducation(index, e.target.name, e.target.value)
-  }
+    this.props.updateEducation(index, e.target.name, e.target.value);
+  };
 
   renderEducation = () => {
-    const { education, educationFieldCount } = this.props
-    console.log(this.props)
-    let fields = []
+    const { education, educationFieldCount } = this.props;
+    console.log(this.props);
+    let fields = [];
     for (let index = 0; index < educationFieldCount; index++) {
       fields.push(
-      <>
-        <Form.Item label='Degree Name' validateStatus='' required>
-            <Input placeholder='degree' name='degree' value={education[index].degree} onChange={(e) => this.handleChange(e, index)} />
-          </Form.Item>
-          <Form.Item label='Year of passing' validateStatus='' required>
-            <Input placeholder='year of passing' name='yop' value={education[index].yop} onChange={(e) => this.handleChange(e, index)} />
-          </Form.Item>
-          <Button type='danger' icon='delete' className='float-right mb-2' onClick={() => this.deleteField(index)} disabled={this.props.educationFieldCount <= 1}>
-        Delete
-        </Button>
-      </>
-      )
+        <>
+          <label for="Degree Name">Degree Name</label>
+          <input
+            name="degree"
+            value={education[index].degree}
+            onChange={e => this.handleChange(e, index)}
+          />
+          <label for="Year of passing">Year of passing</label>
+          <input
+            name="yop"
+            value={education[index].yop}
+            onChange={e => this.handleChange(e, index)}
+          />
+          <button
+            style={{ marginRight: '5%' }}
+            className="btn btn-danger float-right mb-2"
+            onClick={() => this.deleteField(index)}
+            disabled={this.props.educationFieldCount <= 1}
+          >
+            Delete
+          </button>
+        </>
+      );
     }
 
-    return fields
-  }
+    return fields;
+  };
 
   addField = () => {
-    this.props.updateEducationCount(this.props.educationFieldCount + 1)
-  }
+    this.props.updateEducationCount(this.props.educationFieldCount + 1);
+  };
 
   deleteField = () => {
-    this.props.deleteEducationCount(this.props.educationFieldCount - 1)
-  }
+    this.props.deleteEducationCount(this.props.educationFieldCount - 1);
+  };
 
-
-  render () {
+  render() {
     return (
       <>
-        <Form>
-           {this.renderEducation()}
-          <Divider />
-        </Form>
-        <Button type='secondary' icon='plus-circle' onClick={this.addField}>
-          Add More
-        </Button>
+        <div className="container mx-auto">
+          <div className="form-title">
+            <span>Education</span>
+          </div>
+          <div className="row">
+            <div className="col-md-11 mx-auto custom-column">
+              <hr />
+              <div className="form-block">
+                <form>{this.renderEducation()}</form>
+              </div>
+              <hr />
+              <button
+                className="btn btn-success float-right"
+                style={{ marginRight: '5%' }}
+                onClick={this.addField}
+              >
+                Add More
+              </button>
+            </div>
+          </div>
+          <div className="button-group">
+            <button className="btn btn-secondary">Previous</button>
+            <button className="btn btn-dark" onClick={this.handleSubmit}>
+              Next
+            </button>
+          </div>
+        </div>
         <style jsx>
           {`
             .steps-content {
@@ -68,8 +97,8 @@ class Education extends Component {
           `}
         </style>
       </>
-      )
+    );
   }
 }
 
-export default Education
+export default Education;

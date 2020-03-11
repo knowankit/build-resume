@@ -7,6 +7,7 @@ import Home from './components/home';
 import Navbar from './components/navbar';
 import Personal from './containers/personal';
 import Profession from './containers/profession';
+import Education from './containers/education';
 import Garden from './containers/garden';
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/profession">
               <Profession />
+            </Route>
+            <Route path="/education">
+              <Education />
             </Route>
             <Route path="/build">
               <Stepper />

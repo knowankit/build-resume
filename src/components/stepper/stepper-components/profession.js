@@ -9,7 +9,7 @@ class Profession extends Component {
     if (type === 'prev') {
       this.props.history.push('/personal');
     } else {
-      this.props.history.push('/profession');
+      this.props.history.push('/education');
     }
   };
 
@@ -21,7 +21,6 @@ class Profession extends Component {
         <>
           <label for="Company Name">Company Name</label>
           <input
-            placeholder="company name"
             name="company"
             value={profession[index].company}
             onChange={e => this.handleChange(e, index)}
@@ -29,7 +28,6 @@ class Profession extends Component {
           <label for="Role">Role</label>
           <textArea
             rows={2}
-            placeholder="role"
             name="role"
             value={profession[index].role}
             onChange={e => this.handleChange(e, index)}
