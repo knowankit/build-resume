@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPlus, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 class Projects extends Component {
   handleChange = (e, index) => {
@@ -40,7 +42,7 @@ class Projects extends Component {
             onClick={() => this.deleteField(index)}
             disabled={this.props.projectFieldCount <= 1}
           >
-            Delete
+            <FontAwesomeIcon icon={faTrash} /> Delete
           </button>
         </>
       );
@@ -67,7 +69,7 @@ class Projects extends Component {
 
           <div className="row">
             <div className="col-md-11 mx-auto custom-column">
-              <hr />
+
               <div>
                 <form>{this.renderProjects()}</form>
               </div>
@@ -78,7 +80,7 @@ class Projects extends Component {
                 className="btn btn-success float-right"
                 onClick={this.addField}
               >
-                Add More
+                 <FontAwesomeIcon icon={faPlus} /> Add More
               </button>
             </div>
           </div>
@@ -87,13 +89,13 @@ class Projects extends Component {
               className="btn btn-secondary"
               onClick={() => this.handleSubmit("prev")}
             >
-              Previous
+               <FontAwesomeIcon icon={faArrowLeft} /> Previous
             </button>
             <button
               className="btn btn-primary"
               onClick={() => this.handleSubmit("next")}
             >
-              Next
+              Next <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPlus, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 class Education extends Component {
   handleChange = (e, index) => {
     this.props.updateEducation(index, e.target.name, e.target.value);
@@ -38,7 +40,7 @@ class Education extends Component {
             onClick={() => this.deleteField(index)}
             disabled={this.props.educationFieldCount <= 1}
           >
-            Delete
+            <FontAwesomeIcon icon={faTrash} /> Delete
           </button>
         </>
       );
@@ -64,7 +66,6 @@ class Education extends Component {
           </div>
           <div className="row">
             <div className="col-md-11 mx-auto custom-column">
-              <hr />
               <div className="form-block">
                 <form>{this.renderEducation()}</form>
               </div>
@@ -74,7 +75,7 @@ class Education extends Component {
                 style={{ marginRight: '5%' }}
                 onClick={this.addField}
               >
-                Add More
+                <FontAwesomeIcon icon={faPlus} /> Add More
               </button>
             </div>
           </div>
@@ -83,13 +84,13 @@ class Education extends Component {
               className="btn btn-secondary"
               onClick={() => this.handleSubmit('prev')}
             >
-              Previous
+              <FontAwesomeIcon icon={faArrowLeft} /> &nbsp; Previous
             </button>
             <button
               className="btn btn-dark"
               onClick={() => this.handleSubmit('next')}
             >
-              Next
+              Next  <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
         </div>

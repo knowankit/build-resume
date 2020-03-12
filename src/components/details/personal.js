@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 class Personal extends Component {
   handleChange = e => {
     this.props.updatePersonal(e.target.name, e.target.value);
@@ -85,13 +87,13 @@ class Personal extends Component {
                 className="btn btn-secondary"
                 onClick={() => this.handleSubmit("prev")}
               >
-                Previous
+                <FontAwesomeIcon icon={faArrowLeft} /> Previous
               </button>
               <button
                 className="btn btn-dark"
                 onClick={() => this.handleSubmit("next")}
               >
-                Next
+                Next <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </div>

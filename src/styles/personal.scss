@@ -31,12 +31,12 @@ form {
 }
 
 hr {
-  background-color: black;
+  background-color: #26547C;
   height: 2px !important;
   margin-top: 0px !important;
-  //   -webkit-box-shadow: 3px 3px 16px 0px grey;
-  //   -moz-box-shadow: 3px 3px 16px 0px grey;
-  //   box-shadow: 3px 3px 16px 0px grey;
+    -webkit-box-shadow: 3px 3px 16px 0px grey;
+    -moz-box-shadow: 3px 3px 16px 0px grey;
+    box-shadow: 3px 3px 16px 0px grey;
 }
 
 input {
@@ -45,7 +45,6 @@ input {
   border-style: solid;
   font-size: 18px !important;
   padding-left: 10px;
-  border-radius: 5px;
 }
 
 label {
@@ -67,7 +66,7 @@ input,
 label {
   margin-left: 5% !important;
   margin-bottom: 15px !important;
-  border-color: #121212;
+  border-color: #FCFCFC;
 }
 
 label {

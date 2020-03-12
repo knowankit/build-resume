@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPlus, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 class Profession extends Component {
   handleChange = (e, index) => {
     this.props.updateProfession(index, e.target.name, e.target.value);
@@ -38,7 +41,7 @@ class Profession extends Component {
             onClick={() => this.deleteField(index)}
             disabled={this.props.professionFieldCount <= 1}
           >
-            Delete
+            <FontAwesomeIcon icon={faTrash} /> Delete
           </button>
         </>
       );
@@ -63,7 +66,6 @@ class Profession extends Component {
         </div>
         <div className="row">
           <div className="col-md-11 mx-auto custom-column">
-            <hr />
             <div>
               <form>{this.renderProjects()}</form>
             </div>
@@ -73,7 +75,7 @@ class Profession extends Component {
               className="btn btn-success float-right"
               onClick={this.addField}
             >
-              Add More
+              <FontAwesomeIcon icon={faPlus} /> Add More
             </button>
           </div>
         </div>
@@ -83,13 +85,13 @@ class Profession extends Component {
             className="btn btn-secondary"
             onClick={() => this.handleSubmit('prev')}
           >
-            Previous
+            <FontAwesomeIcon icon={faArrowLeft} /> Previous
           </button>
           <button
             className="btn btn-dark"
             onClick={() => this.handleSubmit('next')}
           >
-            Next
+            Next <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
         <style jsx>
