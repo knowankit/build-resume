@@ -10,7 +10,7 @@ class Projects extends Component {
     if (type === "prev") {
       this.props.history.push("/education");
     } else {
-      this.props.history.push("/projects");
+      this.props.history.push("/garden");
     }
   };
 

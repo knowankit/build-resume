@@ -88,7 +88,7 @@ class Personal extends Component {
                 Previous
               </button>
               <button
-                className="btn btn-primary"
+                className="btn btn-dark"
                 onClick={() => this.handleSubmit("next")}
               >
                 Next

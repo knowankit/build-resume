@@ -1,49 +1,49 @@
-import React from 'react'
-import './App.scss'
-import 'antd/dist/antd.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Stepper from './containers/stepper'
-import Home from './components/home'
-import Navbar from './components/navbar'
-import Personal from './containers/personal'
-import Profession from './containers/profession'
-import Education from './containers/education'
-import Projects from './containers/projects'
-import Garden from './containers/garden'
+import React from "react";
+import "./App.scss";
+import "antd/dist/antd.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/home";
+import Navbar from "./components/navbar";
+import Personal from "./containers/personal";
+import Profession from "./containers/profession";
+import Education from "./containers/education";
+import Projects from "./containers/projects";
+import Garden from "./containers/garden";
+import ThemeSelection from "./containers/theme-selection";
 
-function App () {
+function App() {
   return (
     <>
       <Navbar />
       <Router>
         <div>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route path='/personal'>
+            <Route path="/theme-selection">
+              <ThemeSelection />
+            </Route>
+            <Route path="/personal">
               <Personal />
             </Route>
-            <Route path='/profession'>
+            <Route path="/profession">
               <Profession />
             </Route>
-            <Route path='/education'>
+            <Route path="/education">
               <Education />
             </Route>
-            <Route path='/projects'>
+            <Route path="/projects">
               <Projects />
             </Route>
-            <Route path='/build'>
-              <Stepper />
-            </Route>
-            <Route path='/garden'>
+            <Route path="/garden">
               <Garden />
             </Route>
           </Switch>
         </div>
       </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
