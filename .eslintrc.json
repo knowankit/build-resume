@@ -1,16 +1,21 @@
 {
-  "extends": ["eslint:recommended", "prettier", "prettier/react", "pluggin:react/recommended"],
-  "plugins": [],
+  "extends": ["standard", "plugin:react/recommended"],
+  "plugins": ["react"],
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
+    "parser": "babel-eslint",
+    "ecmaVersion": 9,
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  }
+  "rules": {
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": ["error", "single"]
+  },
+  "settings": {
+    "react": {
+      "version": "16.5.2"
+    }
+  },
+  "parser": "babel-eslint"
 }
