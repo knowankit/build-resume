@@ -24,39 +24,9 @@ class ThemeSelection extends Component {
       <>
         <div className="theme-selection mt-2">
           <div className="heading">
-            <p className="mx-auto">Select theme</p>
+            <p className="mx-auto">Select Theme</p>
           </div>
           <div className="grid-area">
-            <button
-              onClick={() => this.selectTheme("garden")}
-              className="theme-button"
-            >
-              Green
-            </button>
-            <button
-              onClick={() => this.selectTheme("garden")}
-              className="theme-button"
-            >
-              Green
-            </button>
-            <button
-              onClick={() => this.selectTheme("garden")}
-              className="theme-button"
-            >
-              Green
-            </button>
-            <button
-              onClick={() => this.selectTheme("garden")}
-              className="theme-button"
-            >
-              Green
-            </button>
-            <button
-              onClick={() => this.selectTheme("garden")}
-              className="theme-button"
-            >
-              Green
-            </button>
             <button
               onClick={() => this.selectTheme("garden")}
               className="theme-button"

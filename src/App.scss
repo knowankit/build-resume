@@ -2,12 +2,18 @@
 
 @import "./styles/personal.scss";
 
+
+// Google fonts
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bellota:400,700&display=swap');
+
+
+
 body {
-  //   background: url('/static/images/resume-image-2.jpg') no-repeat center center
-  // fixed;
+  background: #EF476F !important;
   background-size: cover;
-  font-family: "Lato", sans-serif;
+  // font-family: "Lato", sans-serif !important;
+    font-family: 'Bellota', cursive;
   height: 100vh;
 }
 
@@ -29,12 +35,12 @@ body {
 }
 
 .menubar {
-  background-color: #121212;
+  background-color: #F0EFF4;
   height: 80px;
   span {
     font-size: 30px;
     margin-left: 20px;
-    color: white;
+    color: #121212;
   }
   display: flex;
   align-content: center;
@@ -44,11 +50,12 @@ body {
   margin-top: 50px;
   color: white;
   text-align: center;
-
+  margin-top: 80px;
+  
   p:first-child {
     margin: 0px;
     font-size: 40px;
-    color: white;
+    color: #121212;
   }
 
   p {
@@ -56,15 +63,15 @@ body {
     color: #1e1e24;
   }
   .build-now {
-    background-color: #7ae7c7;
+    background-color: #FFD166;
+    color: #121212;
     padding: 10px;
   }
 }
 
 .theme-selection {
-  -webkit-box-shadow: 10px 10px 21px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 21px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 21px -6px rgba(0, 0, 0, 0.75);
+  font-family: "Lato", sans-serif;
+  background-color: transparent !important;
 
   .theme-button {
     margin-top: 10px;
@@ -73,7 +80,7 @@ body {
     background: url("/themes/resume1.png");
     background-position: -20px;
     background-size: cover;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid black;
     -webkit-box-shadow: 4px 6px 20px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 6px 20px -8px rgba(0, 0, 0, 0.75);

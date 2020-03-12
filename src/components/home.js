@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMousePointer, faDownload, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 class Home extends Component {
@@ -11,19 +13,19 @@ class Home extends Component {
             Creating a Professional Resume and Cover Letter is Easy Now.
           </p>
           <Link to='/theme-selection' className='btn btn-lg build-now'>
-            Build Now
+           Start Here
           </Link>
         </div>
-        <div className='row instruction-row'>
+        <div className='row'>
           <div className='instruction col-md-4 content mx-auto text-center mt-4'>
             <p>
-             Choose a Theme
+              <FontAwesomeIcon icon={faMousePointer} />&nbsp; Choose a Theme
             </p>
             <p>
-             Enter Details
+              <FontAwesomeIcon icon={faInfoCircle} />&nbsp; Enter Details
             </p>
             <p>
-              Download PDF
+              <FontAwesomeIcon icon={faDownload} />&nbsp; Download PDF
             </p>
           </div>
         </div>
@@ -35,9 +37,11 @@ class Home extends Component {
               display: flex;
               border-radius: 5px;
               align-items: center;
+              color: #26547C;
             }
 
             .instruction {
+              margin-top: 50px !important;
               display: flex;
               flex-direction: column;
               align-items: center;

@@ -22,7 +22,7 @@ class Personal extends Component {
 
         <div className="row">
           <div className="col-md-11 mx-auto custom-column">
-            <hr />
+            {/* <hr /> */}
             <div className="form-block">
               <form className="mx-auto">
                 <div>
