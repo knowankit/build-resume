@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.scss';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/home';
-import Navbar from './components/navbar';
-import Personal from './containers/personal';
-import Profession from './containers/profession';
-import Education from './containers/education';
-import Projects from './containers/projects';
-import Garden from './containers/garden';
-import ThemeSelection from './containers/theme-selection';
+import React from 'react'
+import './App.scss'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/home'
+import Navbar from './components/navbar'
+import Personal from './containers/personal'
+import Profession from './containers/profession'
+import Education from './containers/education'
+import Projects from './containers/projects'
+import Garden from './containers/garden'
+import ThemeSelection from './containers/theme-selection'
 
 function App () {
   return (

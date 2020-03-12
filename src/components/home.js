@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
   render () {
@@ -15,7 +15,7 @@ class Home extends Component {
           </Link>
         </div>
         <div className='row instruction-row'>
-          <div className='instruction content mx-auto text-center mt-4'>
+          <div className='instruction col-md-4 content mx-auto text-center mt-4'>
             <p>
              Choose a Theme
             </p>
