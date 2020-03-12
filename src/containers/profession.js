@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateProfession, updateProfessionCount, deleteProfessionCount } from '../actions/profession'
-import Profession from '../components/stepper/stepper-components/profession'
+import Profession from '../components/details/profession'
 
 const mapStateToProps = state => ({
   profession: state.profession.profession,

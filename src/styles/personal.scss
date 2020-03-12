@@ -1,0 +1,91 @@
+.custom-column {
+  background-color: #EF476F;
+  overflow: scroll;
+  min-height: 400px;
+}
+
+// Form css
+
+
+form {
+  overflow-x: hidden;
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.form-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 20px;
+  //   background-color: #45adff;
+
+  color: #121212;
+  span {
+    margin-left: 10px;
+    margin: 0px auto 0px auto;
+    font-size: 25px;
+  }
+}
+
+hr {
+  background-color: #26547C;
+  height: 2px !important;
+  margin-top: 0px !important;
+    -webkit-box-shadow: 3px 3px 16px 0px grey;
+    -moz-box-shadow: 3px 3px 16px 0px grey;
+    box-shadow: 3px 3px 16px 0px grey;
+}
+
+input {
+  width: 90%;
+  height: 50px;
+  border-style: solid;
+  font-size: 18px !important;
+  padding-left: 10px;
+}
+
+label {
+  width: 90%;
+  display: block;
+  font-size: 20px;
+}
+
+textarea {
+  display: block;
+  border: 2px;
+  border-style: solid;
+  width: 90%;
+  padding-left: 10px;
+}
+
+textarea,
+input,
+label {
+  margin-left: 5% !important;
+  margin-bottom: 15px !important;
+  border-color: #FCFCFC;
+}
+
+label {
+  margin-bottom: 5px !important;
+}
+
+// button group
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  button {
+    width: 40%;
+    height: 60px;
+    text-transform: uppercase;
+    border-radius: 0px;
+  }
+}

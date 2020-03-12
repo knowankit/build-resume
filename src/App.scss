@@ -1,95 +1,106 @@
 @import "./styles/resume-themes.scss";
 
+@import "./styles/personal.scss";
+
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bellota:400,700&display=swap');
+
+
+
 body {
-    background:  linear-gradient(
-    #f80759e6,
-        rgba(188, 78, 156, 0.9)
-      ),
-      url("/static/images/resume-image.jpg") no-repeat center center fixed;
-      background-size: cover;
-      height: 100vh;
+  background: #EF476F !important;
+  background-size: cover;
+  // font-family: "Lato", sans-serif !important;
+    font-family: 'Bellota', cursive;
+  height: 100vh;
 }
 
-.login{
-    background-color: white;
-    height: 800px;
-    overflow-y: scroll;
-    border-radius: 20px;
-    margin-top: 250px;
-    margin-bottom: 250px;
+.login {
+  background-color: white;
+  height: 800px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 
 .content {
-    background-color: white;
-    margin-top: 150px;
-    width: 60rem;;
-    min-height: 20rem;
-    border-radius: 5px;
+  background-color: white;
+  margin-top: 150px;
+  width: 60rem;
+  min-height: 20rem;
+  border-radius: 5px;
+}
+
+.menubar {
+  background-color: #F0EFF4;
+  height: 80px;
+  span {
+    font-size: 30px;
+    margin-left: 20px;
+    color: #121212;
+  }
+  display: flex;
+  align-content: center;
+}
+
+.heading {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
   
-}
+  p:first-child {
+    margin: 0px;
+    font-size: 40px;
+    color: #121212;
+  }
 
-.menubar{
-    background-color: white;
-    height: 80px;
-    span{
-        font-size: 30px;
-        margin-left: 20px;
-        color: #1E1E24;
-    }
-    display: flex;
-    align-content: center;
-
-}
-
-.heading{
-    margin-top: 100px;
-    color: white;
-    text-align: center;
-
-    p:first-child{
-        margin: 0px;
-        font-size: 40px;
-        color: white;
-    }
-
-    p {
-        font-size: 20px;
-        color: #1E1E24;
-    }
-      .build-now {
-        background-color: #7AE7C7;
-        padding: 10px;
-    }
-}
-
-.stepper {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px 200px;
+  p {
+    font-size: 20px;
+    color: #1e1e24;
+  }
+  .build-now {
+    background-color: #FFD166;
+    color: #121212;
+    padding: 10px;
+  }
 }
 
 .theme-selection {
-    .theme-button {
-        margin-top: 50px;
-        height: 200px !important;
-        width: 150px;
-        background-color: black;
-        color: white !important;
-        background:  url("/themes/resume1.png");
-        background-position: -40px;
-        background-size: cover;
-        border-radius: 2px;
-    }
+  font-family: "Lato", sans-serif;
+  background-color: transparent !important;
+
+  .theme-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white !important;
+    background: url("/themes/resume1.png");
+    background-position: -20px;
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid black;
+    -webkit-box-shadow: 4px 6px 20px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 6px 20px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 6px 20px -8px rgba(0, 0, 0, 0.75);
+    transition: all 0.4s;
+  }
+
+  .theme-button:hover {
+    box-shadow: none;
+  }
 }
 
 .home-button {
-    margin-left: 1500px;
-    font-size: 20px;
-    background-color: white;
-    border: unset;
-    font-weight: bold;
+  margin-left: 1500px;
+  font-size: 20px;
+  background-color: white;
+  border: unset;
+  font-weight: bold;
 }
 
 .home-button:hover {
-    color: #f80759e6 !important;
+  color: #f80759e6 !important;
 }

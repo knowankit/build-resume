@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateProject, updateProjectCount, deleteProjectCount } from '../actions/projects'
-import Projects from '../components/stepper/stepper-components/projects'
+import Projects from '../components/details/projects'
 
 const mapStateToProps = state => ({
   projects: state.projects.projects,

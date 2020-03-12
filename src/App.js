@@ -1,14 +1,14 @@
 import React from 'react'
 import './App.scss'
-import 'antd/dist/antd.css'
-import {
-  BrowserRouter as Router, Switch, Route
-} from 'react-router-dom'
-import Stepper from './containers/stepper'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/home'
 import Navbar from './components/navbar'
-import ThemeSelection from './containers/theme-selection'
+import Personal from './containers/personal'
+import Profession from './containers/profession'
+import Education from './containers/education'
+import Projects from './containers/projects'
 import Garden from './containers/garden'
+import ThemeSelection from './containers/theme-selection'
 
 function App () {
   return (
@@ -23,8 +23,17 @@ function App () {
             <Route path='/theme-selection'>
               <ThemeSelection />
             </Route>
-            <Route path='/build'>
-              <Stepper />
+            <Route path='/personal'>
+              <Personal />
+            </Route>
+            <Route path='/profession'>
+              <Profession />
+            </Route>
+            <Route path='/education'>
+              <Education />
+            </Route>
+            <Route path='/projects'>
+              <Projects />
             </Route>
             <Route path='/garden'>
               <Garden />
@@ -32,7 +41,7 @@ function App () {
           </Switch>
         </div>
       </Router>
-  </>
+    </>
   )
 }
 
