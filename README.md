@@ -6,3 +6,7 @@ A web app to create your resume and cover letter.
 ## Tech Stack
 
 * Built with `React`, `Redux`, `Bootstrap`
+
+## Click for Demo
+
+[Build Resume](https://build-resume.netlify.com/)
