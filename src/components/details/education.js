@@ -71,7 +71,7 @@ class Education extends Component {
               </div>
               <hr />
               <button
-                className="btn btn-success float-right"
+                className="btn btn-light float-right"
                 style={{ marginRight: '5%' }}
                 onClick={this.addField}
               >
@@ -81,7 +81,7 @@ class Education extends Component {
           </div>
           <div className="button-group">
             <button
-              className="btn btn-secondary"
+              className="btn btn-dark"
               onClick={() => this.handleSubmit('prev')}
             >
               <FontAwesomeIcon icon={faArrowLeft} /> &nbsp; Previous

@@ -84,7 +84,7 @@ class Personal extends Component {
             <hr />
             <div className="button-group">
               <button
-                className="btn btn-secondary"
+                className="btn btn-dark"
                 onClick={() => this.handleSubmit("prev")}
               >
                 <FontAwesomeIcon icon={faArrowLeft} /> Previous
