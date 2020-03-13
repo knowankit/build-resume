@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import html2canvas from 'html2canvas'
 import Jspdf from 'jspdf'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import 'bootstrap/dist/css/bootstrap.css'
 export class Garden extends Component {
   pdfToHTML () {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
     let element = document.querySelector('.bright-and-light')
     const filename = 'ThisIsYourPDFFilename.pdf'
 
@@ -22,7 +24,8 @@ export class Garden extends Component {
 
     return (
       <>
-      <p className='text-center mt-4'><button className='btn btn-success' onClick={this.pdfToHTML}>Download as pdf</button></p>
+        <p className='text-center mt-4'><button className='btn btn-dark download' onClick={this.pdfToHTML}>
+          <FontAwesomeIcon icon={faDownload} /> Download</button></p>
         <div className='container bright-and-light'>
           <div className='row'>
             <div className='job-title'>
@@ -74,7 +77,7 @@ export class Garden extends Component {
           </div>
           <div className='row footer' />
         </div>
-        
+
     </>
     )
   }
