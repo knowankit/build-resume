@@ -72,7 +72,7 @@ class Profession extends Component {
             <hr />
             <button
               style={{ marginRight: '5%' }}
-              className="btn btn-success float-right"
+              className="btn btn-light float-right"
               onClick={this.addField}
             >
               <FontAwesomeIcon icon={faPlus} /> Add More
@@ -82,7 +82,7 @@ class Profession extends Component {
 
         <div className="button-group">
           <button
-            className="btn btn-secondary"
+            className="btn btn-dark"
             onClick={() => this.handleSubmit('prev')}
           >
             <FontAwesomeIcon icon={faArrowLeft} /> Previous

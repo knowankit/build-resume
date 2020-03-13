@@ -77,7 +77,7 @@ class Projects extends Component {
               <button
                 style={{ marginRight: "5%" }}
                 onClick={this.addField}
-                className="btn btn-success float-right"
+                className="btn btn-light float-right"
                 onClick={this.addField}
               >
                  <FontAwesomeIcon icon={faPlus} /> Add More
@@ -86,13 +86,13 @@ class Projects extends Component {
           </div>
           <div className="button-group">
             <button
-              className="btn btn-secondary"
+              className="btn btn-dark"
               onClick={() => this.handleSubmit("prev")}
             >
                <FontAwesomeIcon icon={faArrowLeft} /> Previous
             </button>
             <button
-              className="btn btn-primary"
+              className="btn btn-success"
               onClick={() => this.handleSubmit("next")}
             >
               Next <FontAwesomeIcon icon={faArrowRight} />
