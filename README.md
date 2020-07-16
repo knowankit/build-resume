@@ -9,4 +9,4 @@ A web app to create your resume and cover letter.
 
 ## Click for Demo
 
-[Build Resume](https://build-resume.netlify.com/)
+[Build Resume Live](https://build-resume.netlify.com/)
