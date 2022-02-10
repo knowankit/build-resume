@@ -48,7 +48,7 @@
     "eslint-config-prettier": "^6.11.0",
     "prettier": "^1.19.1",
     "redux-devtools-extension": "^2.13.8",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.2.0",
